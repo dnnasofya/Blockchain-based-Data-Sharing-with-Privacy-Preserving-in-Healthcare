@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medcare</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: hsl(210, 50%, 13%);
+            color: white;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .header {
+            text-align: center;
+            padding: 100px;
+        }
+        .header h1 {
+            font-size: 5em;
+            font-weight: normal;
+            margin: 0;
+        }
+        .header-container {
+            background-color: #112233;
+            display: inline-block;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .header-container img {
+            max-width: 30%;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+</head>
+<body>
+    <div id="topbar"></div>
+    <div class="header">
+        <div class="header-container">
+            <h1>Welcome to MedCare!</h1>
+            <img src="logo.png" alt="Medcare Logo">
+        </div>
+    </div>
+
+    <script>
+        // Simulate fetching Ethereum accounts and routing
+        async function getAccounts() {
+            // Simulate a delay
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    resolve(['0x1234567890abcdef1234567890abcdef12345678']);
+                }, 1000);
+            });
+        }
+
+        async function viewProfile(type) {
+            const accounts = await getAccounts();
+            alert(`Navigating to ${type} profile for account: ${accounts[0]}`);
+            
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<style>
+    .navbar {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              background-color: #336666;
+              padding: 20px 30px; /* Increase padding for a bigger top bar */
+              font-size: 2em; /* Increase font size */
+          }
+          .navbar a {
+              color: white;
+              text-decoration: none;
+              padding: 15px 20px;
+          }
+          .navbar a:hover {
+              background-color: #114444;
+          }
+          .dropdown {
+              position: relative;
+              display: inline-block;
+          }
+          .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: white;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              z-index: 1;
+          }
+          .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+          }
+          .dropdown-content a:hover {
+              background-color: #ddd;
+          }
+          .dropdown:hover .dropdown-content {
+              display: block;
+          }
+</style>
+<div class="navbar" id="topbar">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+        <a href="#">Doctor</a>
+        <div class="dropdown-content">
+            <a href="#" id="viewDoctorProfile">View Profile</a>
+            <a href="#" id="editDoctorProfile">Edit Profile</a>
+            <a href="#" id="makeAppointment">Make Appointment</a>
+            <a href="#" id="updateAppointment">Update Appointment</a>
+            <a href="patientlist.html">Patient List</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="#">Patient</a>
+        <div class="dropdown-content">
+            <a href="#" id="viewPatientProfile">View Profile</a>
+            <a href="#" id="editPatientProfile">Edit Profile</a>
+            <a href="#" id="allowAccess">Allow Access</a>
+            <a href="#" id="revokeAccess">Revoke Access</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="#">Register</a>
+        <div class="dropdown-content">
+            <a href="register-patient.html">Patient</a>
+            <a href="register-doctor.html">Doctor</a>
+        </div>
+    </div>
+</div>
